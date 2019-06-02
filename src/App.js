@@ -1,26 +1,26 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import {BrowserRouter,Switch,Route} from 'react-router-dom';
+import Loader from 'react-loaders';
+import BookSectionPage from './components/pages/book-section';
+import PageNotFound from './components/pages/page-not-found'
+import BookDetailPage from './components/pages/book-detail';
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <BrowserRouter>
+        <Switch>
+          <Route path='/' component={BookSectionPage} exact/>
+          <Route path='/books/catagory/:catagoryName' exact render={props=>{
+            let {catagoryName}=props.match.params;
+            return(<BookSectionPage catagoryName={catagoryName}/>)
+          }}/>
+          <Route path='/book/:bookID' exact render={props=>{
+            let {bookID}=props.match.params;
+            return(<BookDetailPage bookID={bookID}/>)
+          }}/>
+          <Route  component={PageNotFound} />
+        </Switch>
+      </BrowserRouter>
     );
   }
 }

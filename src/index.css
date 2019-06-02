@@ -12,3 +12,49 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.navbar-brand{
+  font-size: 2em !important;
+  padding-left: 3em !important;
+}
+.card{
+  width: 90%;
+  height:90%;
+}
+.card img{
+  width:100% !important;
+  height: 100% !important;
+}
+.review-stars{
+  color:rgb(189, 189, 40);
+  font-size: 1.1em;
+}
+footer{
+  padding:50px;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.connection{
+  font-size:1.4em;
+}
+.connection a{
+   color:rgb(161, 156, 156);
+}
+.connection a:hover{
+  color:rgb(255, 255, 255);
+}
+.error-icon{
+  font-size: 10em;
+}
+.error-text{
+  font-size: 5em;
+}
+html{
+  position: relative;
+  min-height: 100%;
+}
+.loader{
+  width:700px;
+  margin:150px auto;
+}

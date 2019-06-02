@@ -1,0 +1,10 @@
+$primary-color: rgba(78, 72, 72, 0.87);
+@import 'loaders.css/src/animations/pacman.scss';
+
+
+.loader-hidden {
+  display: none;
+}
+.loader-active {
+  display: block;
+}
